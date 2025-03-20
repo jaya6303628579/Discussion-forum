@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>languages</h1>
+<ul th:each="la :${lan}">
+<li th:text="${la}"></li></ul>
+<a href="reg">student registartion</a>
+</body>
+</html>

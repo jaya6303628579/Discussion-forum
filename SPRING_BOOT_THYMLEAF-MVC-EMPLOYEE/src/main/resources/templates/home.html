@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function searchbyname(){
+	document.frm.action="searchbyname";
+	document.frm.submit();
+}
+</script>
+</head>
+<body>
+<h2>EMPLOYEE MANAGEMENT SYSTEM</h2>
+<a th:href="@{/addEmployee}">ADD EMPLOYEE</a> <P/>
+<a th:href="@{/GETONE}">GET EMPLOYEE</a><P/>
+<form name="frm" method="post">
+<table>
+<tr>
+<td><input name="empname" placeholder="enter name"> </td>
+<td><input type="button" value=search onclick="searchbyname()"> </td>
+</tr>
+</table>
+</form>
+<table border="1" width="100%">
+<tr>
+<th>ID</th>
+<th>NAME</th>
+<th>ROLE</th>
+<th>SALARY</th>
+<th>LOCATION</th>
+<th>EDIT</th>
+<th>DELETE</th>
+</tr>
+<tr th:each="emp : ${emps}">
+<td th:text="${emp.id}"></td>
+<td th:text="${emp.name}"></td>
+<td th:text="${emp.role}"></td>
+<td th:text="${emp.salary}"></td>
+<td th:text="${emp.location}"></td>
+<td><a th:href="@{/editEmp/{id}(id=${emp.id})}">EDIT</a></td>
+<td><a th:href="@{/deleteEmp/{id}(id=${emp.id})}">DELETE</a></td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Email</title>
+</head>
+<body>
+<h1>Email Template</h1>
+<form action="#" th:action="@{/sendEmail}" th:object="${emailTemplate}" method="post">
+	<table>
+		<tr>
+			<td>To</td>
+			<td><input th:field="*{to}" /></td>
+		</tr>
+		<tr>
+			<td>Subject</td>
+			<td><input th:field="*{subject}" /></td>
+		</tr>
+		<tr>
+			<td>Body</td>
+			<td><input th:field="*{body}" /></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center"><input type="submit" /></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+table,tr,th,td{
+border:solid,1px;
+border-collapse: collapse;
+text-align: center;
+}
+</style>
+</head>
+<body>
+<table width="100%">
+<tr>
+<th>ID</th>
+<th>NAME</th>
+<th>ROLE</th>
+<th>SALARY</th>
+<th>LOCATION</th>
+</tr>
+<tr>
+<td><h5 th:text="${emp.id}"></h5></td>
+<td><h5 th:text="${emp.name}"></h5></td>
+<td><h5 th:text="${emp.role}"></h5></td>
+<td><h5 th:text="${emp.salary}"></h5></td>
+<td><h5 th:text="${emp.location}"></h5></td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>LOGIN PAGE</h1>
+<form th:action=@{/addmember} th:object=${members} th:method="post">
+<table border="1">
+<tr>
+<td>ROOMATE ID</td>
+<td><input th:field="*{id}"></td>
+</tr>
+<tr>
+<td>ROOMATE NAME</td>
+<td><input th:field="*{name}"></td>
+</tr>
+<tr>
+<td>ROOMATE AMOUNT</td>
+<td><input th:field="*{amount}"></td>
+</tr>
+<tr><td><input type="submit" value="ADD ROOMATE"/>
+</td></tr>
+</table>
+</form>
+</body>
+</html>

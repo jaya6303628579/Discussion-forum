@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>ADD EMPLOYEE DETAILS</h2>
+<form th:action="@{/saveEmp}" th:object="${emp}" th:method="post">
+<table border="1" width="100%">
+<tr>
+<td>EMPLOYEE ID</td>
+<td><input th:field="*{id}"></td>
+</tr>
+<tr>
+<td>EMPLOYEE NAME</td>
+<td><input th:field="*{name}"></td>
+</tr>
+<tr>
+<td>EMPLOYEE ROLE</td>
+<td><input th:field="*{role}"></td>
+</tr>
+<tr>
+<td>EMPLOYEE SALARY</td>
+<td><input type="number" th:field="*{salary}"></td>
+</tr>
+<tr>
+<td>EMPLOYEE LOCATION</td>
+<td><input th:field="*{location}"></td>
+</tr>
+<tr>
+<td colspan="2" align="center"><input type="submit" value="SAVE EMPLOYEE"/>&nbsp;&nbsp; <a href="/home">CANCEL</a>
+
+</tr>
+</table>
+</form>
+</body>
+</html>
