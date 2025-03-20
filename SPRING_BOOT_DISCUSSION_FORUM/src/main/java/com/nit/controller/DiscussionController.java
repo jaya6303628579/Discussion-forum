@@ -140,6 +140,7 @@ public class DiscussionController {
 	public String aluminLog() {
 		return "alumini_login";
 	}
+//hiii
 
 	@PostMapping("ALUMINILOG")
 	public String aluminLogin(HttpServletRequest req, Model model) {
